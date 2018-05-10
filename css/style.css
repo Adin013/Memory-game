@@ -1,0 +1,246 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ffffff;
+  font-family: 'Tangerine', serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-style: 
+  font-size: 35px;
+}
+h1 {
+  font-family: 'Tangerine', serif;
+  font-size: 50px;
+  margin-top: 20px;
+}
+/*
+ * Styles for the deck of cards
+ */
+.grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  border: 2px solid blue;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.choiced {
+  border: 4px solid blue;
+}
+.match {
+  border: 4px solid red;
+  background-image: none !important;
+  max-width: 500px;
+}
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+  border-radius: 4px;
+  box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+  background-color: #6589F9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100px;
+  width: 100px;
+}
+deck of cards
+.card,
+.back,
+.front {
+  height: 100px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front {
+  background: url('../img/cardfront.png') no-repeat center center / contain;
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.choiced {
+  transform: rotateY(180deg);
+}
+
+.match .back {
+  background: #f96589 !important;
+}
+.match .front {
+  background: #f96589 !important;
+}
+/*
+ * Styles for the Score Panel
+ */
+.stopwatch {
+  width: 900px;
+  background-color: #0af;
+  border-radius: 5px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.75), 0 0 1px rgba(0, 0, 0, 0.15);
+  max-height: 200px;
+  &, & * {
+    transition: all 0.15s ease-out;
+  }
+}
+#timerLabel {
+  color: white;
+  align-items: center;
+  margin-left: 5px;
+  font-size: 40px;
+}
+.myButton {
+ width: 70px;
+  height: 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.title, .myButton {
+font-family: 'Berkshire Swash', cursive;
+color: midnightblue;
+}
+.fa-star, .fa-star-o {
+    color: #ffd700;
+    width: 100px;
+    height:50px;
+}
+.score-panel {
+  width: 900px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.score-panel > div {
+  margin: auto;
+  text-align: center;
+}
+.score-panel .lives {
+ flex-basis: 25%;
+    
+}
+.score-panel .moves {
+  flex-basis: 20%;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Berkshire Swash', cursive;
+  margin-right: 150px;
+}
+.score-panel .moves .moves-elem {
+  display: inline-block;
+}
+.score-panel .moves #moves-number {
+  width: 10px;
+    
+}
+.score-panel .stars { 
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: 35px;
+}
+.score-panel p {
+  display: inline;
+}
+.score-panel .lives .stars li {
+  list-style: none;
+  display: inline-block;
+}
+/*
+ * Styles for popup window
+ */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #E5F720;
+}
+.popup .content1,
+.content2 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+.show {
+  visibility: visible !important;
+  opacity: 100 !important;
+}
+#starRating li {
+  display: inline-block;
+}
+#play-again {
+  background-color: #141214;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
