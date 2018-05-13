@@ -7,3 +7,7 @@ The game starts with clicking on acard. The chosen card flips and the timer star
 The game offers a star rating also. It sarts with 3 stars. As soon as the player exceeds 15 moves, one star will be reduced. the second star will be reduced when 23 moves are already done. The player will recieve no stars if he can not end the game with less than 33 moves.
 
 At the end of the game information about star rating, number of moves done, time passed and options like replay will be shown.
+
+## Resources used to create the game:
+<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" ref="https://fonts.googleapis.com/css?family=Tangerine">
