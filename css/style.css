@@ -7,7 +7,7 @@ body {
 }
 body {
   background: #ffffff;
-  font-family: 'Tangerine', serif;
+  font-family: "Tangerine", serif;
 }
 .container {
   display: flex;
@@ -18,7 +18,7 @@ body {
   font-size: 35px;
 }
 h1 {
-  font-family: 'Tangerine', serif;
+  font-family: "Tangerine", serif;
   font-size: 50px;
   margin-top: 20px;
 }
