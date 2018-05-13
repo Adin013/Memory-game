@@ -9,5 +9,5 @@ The game offers a star rating also. It sarts with 3 stars. As soon as the player
 At the end of the game information about star rating, number of moves done, time passed and options like replay will be shown.
 
 ## Resources used to create the game:
-<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<link rel="stylesheet" ref="https://fonts.googleapis.com/css?family=Tangerine">
+- (https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css)
+- (https://fonts.googleapis.com/css?family=Tangerine)
