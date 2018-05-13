@@ -69,8 +69,8 @@ let closeicon = document.querySelector(".close");
 // declare modal
 let modal = document.getElementById("popup1")
 //game timer
-var status = 0; //0:stop 1:running
-var time = 0;
+let status = 0; //0:stop 1:running
+let time = 0;
 //start timer on first click or startButton                    
 function start(){
   status = 1;
@@ -84,7 +84,7 @@ function stop(){
     // show congratulations modal
     modal.classList.add("show");
     // declare star rating variable
-    var starRating = document.querySelector(".stars").innerHTML;
+    let starRating = document.querySelector(".stars").innerHTML;
     //showing move, rating, time on modal
     document.getElementById("finalMove").innerHTML = countMoves+' moves';
     document.getElementById("starRating").innerHTML = starRating;
@@ -107,9 +107,9 @@ function timer(){
   if(status == 1){
     setTimeout(function(){
       time++;
-      var min = Math.floor(time/100/60);
-      var sec = Math.floor(time/100);
-      var mSec = time % 100;  
+      let min = Math.floor(time/100/60);
+      let sec = Math.floor(time/100);
+      let mSec = time % 100;  
       if(min < 10) {
         min = "0" + min;
       }
@@ -165,7 +165,7 @@ const resetGuesses = () => {
   firstGuess = '';
   secondGuess = '';
   count = 0;
-  var choiced = document.querySelectorAll('.choiced');
+  let choiced = document.querySelectorAll('.choiced');
   choiced.forEach(card => {
     card.classList.remove('choiced');
   });
@@ -183,20 +183,15 @@ grid.addEventListener('click', function (event) {
       countMoves++;
       movesNumber.innerHTML = countMoves;
       if(countMoves>=15&&countMoves<=22) {
+        if(countMoves>=18&&countMoves<=27) {
         for( i= 0; i < 3; i++){
           if(i > 1){
             stars[i].style.visibility = "collapse";
           }
         }
-      }else if(countMoves>=23&&countMoves<=32) {
+      }else if(countMoves>=28&&countMoves<=34) {
         for( i= 0; i < 3; i++){
           if(i > 0){
-            stars[i].style.visibility = "collapse";
-          }
-        }
-      }else if(countMoves>=33){
-        for( i= 0; i < 3; i++){
-          if(i > -1){
             stars[i].style.visibility = "collapse";
           }
         }
@@ -240,7 +235,7 @@ function playAgain(){
   reset();
 }
 //add event listeners to each card
-for (var i = 0; i < 12; i++){
+for (let i = 0; i < 12; i++){
   card = cards[i];
   card.addEventListener("click",stop);
 };
